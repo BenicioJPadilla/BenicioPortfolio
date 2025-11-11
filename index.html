@@ -6,86 +6,61 @@
     <title>ShineDrives</title>
     <link rel="stylesheet" href="css/styles.css" />
     <link rel="stylesheet" href="css/index.css" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap"
-      rel="stylesheet"
-    />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Stack+Sans+Notch:wght@200..700&display=swap" rel="stylesheet">
   </head>
-  <body class="container">
-    <header>
-      <nav class="navbar">
-        <div class="logo">
-          <a href="index.html"
-            ><img src="images/shinedrives_logobg.png" alt="ShineDrives"
-          /></a>
-        </div>
-
-        <div class="menu-toggle" id="menu-toggle">☰</div>
-
-        <ul class="nav-links" id="nav-links">
-          <li><a href="index.html">Home</a></li>
-          <li><a href="appointments.html">Appointments</a></li>
-          <li><a href="contact.html">Contact</a></li>
-        </ul>
-      </nav>
-    </header>
-
-    <div class="hero">
-  <div class="hero-text">
-    <h1>SHINE DRIVES CO</h1>
-    <p>
-      We’re Shine Drives Co., your go-to for pressure washing anything from concrete to wood.
-      Driveways, sidewalks, bricks, patios—you name it.
-      We’ll even clean your gutters. Fast, affordable, and always sparkling results.
-    </p>
-    <a href="./appointments.html" class="btn">Book an Appointment</a>
-  </div>
-</div>
-
-    <div class="about-us">
-	<div class="about-us-text">
-      <h1>About Us</h1>
-      <p>
-        At Shine Drives Co., we specialize in pressure washing all types of
-        concrete surfaces. From driveways, sidewalks, and patios to bricks and
-        curbs—we’ve got it covered. We’re all about bringing back that like-new
-        shine to your property. Not only do we handle the ground work, but we
-        also offer gutter cleaning to keep your home looking sharp from top to
-        bottom. Whether it’s dirt, grime, or stubborn stains, we’ll blast it
-        away and leave your surfaces spotless. We accept Cash, Venmo, Apple Pay
-        etc.
-    </p>
-	</div>
-    </div>
-    <footer>
-      <div class="footer">
-        <p>&copy; 2025 Shine Drives Co. All rights reserved.</p>
-        <p>Follow us on social media:</p>
-
-        <ul class="social-links">
-          <li>
-            <a href="https://www.instagram.com/shinedrives/" target="_blank"
-              ><img src="images/insta.png" alt="Instagram"
-            /></a>
-          </li>
-          <li>
-            <a href="https://www.facebook.com/shinedrivesco" target="_blank"
-              ><img src="images/facebook.png" alt="Facebook"
-            /></a>
-          </li>
-        </ul>
+ <body id="container">
+  <header>
+    <nav>
+      <div id="name">BENICIO J. PADILLA</div>
+      <div id="links">
+        <a href="index.html" class="nav-link">ABOUT ME</a>
+        <a href="projects.html" class="nav-link">PROJECTS</a>
+        <a href="contact.html" class="nav-link">CONTACT</a>
       </div>
-    </footer>
-
-    <script>
-      const menuToggle = document.getElementById("menu-toggle");
-      const navLinks = document.getElementById("nav-links");
-
-      menuToggle.addEventListener("click", () => {
-        navLinks.classList.toggle("active");
-      });
-    </script>
-  </body>
+    </nav>
+  </header>
+  <div id="content">
+    <div id="intro-degree">
+      <h1 class="degree">B.S COMPUTER SCIENCE
+         <br>
+        UNIVERSITY OF CALIFORNIA, DAVIS
+      </h1>
+    </div>
+    <div id="intro-introduction">
+      <h2 id="introduction">
+        Hi, I AM A CREATIVE MINDED STUDENT WITH A PASSION FOR WEB DEVELOPMENT
+        AND BEING A DEDICATED TEAMATE
+      </h2>
+    </div>
+    <div id="intro-skills">
+      <h3 class ="skills">SKILLS:
+        <ul class="skill-icons">
+            <li><img class="skill-icons" src="/images/htmllogo.png"></li>
+            <li><img class="skill-icons" src="/images/csslogo.png"></li>
+            <li><img class="skill-icons" src="/images/javascriptlogo.png"></li>
+            <li><img class="skill-icons" src="/images/c++logo.png"></li>
+            <li><img class="skill-icons" src="/images/gitlogo.png"></li>
+            <li><img class="skill-icons" src="/images/reactlogo.png"></li>
+            <li><img class="skill-icons" src="/images/nodejslogo.png"></li>
+            <li><img class="skill-icons" src="/images/chromelogo.png"></li>
+            <li><img class="skill-icons" src="/images/githublogo.png"></li>
+        </ul>
+      </h3>
+    </div>
+    <div id ="intro-contact">
+      <h3 id ="contact">CONTACTS: 
+        <ul id="contact-icons">
+          <li> <img class="contact-icons" src="/images/linkedinlogo.png"></li>
+          <li> <img class="contact-icons" src="/images/githublogo.png"></li>
+          <li> <img class="contact-icons" src="/images/emaillogo.png"></li>
+        </ul>
+      </h3>
+    </div>
+  </div>
+    <div id="benicio-image">
+      <img id="benicio-picture" src="/images/beniciopadilla.png" alt="Picture of Benicio Padilla"/>
+  </div>
+ </body>
 </html>
