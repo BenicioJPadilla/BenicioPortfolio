@@ -8,7 +8,7 @@ This is a fully responsive static website built with **HTML**, **CSS**, and **va
 
 ## 🚀 Live Site:
 
-[https://BenicioJPadilla.github.io/ShineDrivesCO/](https://BenicioJPadilla.github.io/ShineDrivesCO/)
+https
 
 ## Features:
 
