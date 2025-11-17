@@ -1,0 +1,39 @@
+.hero {
+    /*display: flex;
+    justify-content: space-between;
+    align-items: stretch;
+    padding: 0rem;
+    min-height: calc(100vh - 80px);
+    box-sizing: border-box;*/
+}
+
+#content-projects-container {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 2fr 1fr;
+    place-content: center;
+}
+
+#projects-title {
+    grid-column: 1 / span 2;
+    grid-row: 1 / 2;
+    font-size: 3rem;
+    font-weight: 600;
+    letter-spacing: .2rem;
+    text-align: center;
+}
+
+#project-items {
+    grid-column: 1 / span 2;
+    grid-row: 2 / span 1;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+#show-more-button {
+    grid-column: 1 / span 2;
+    grid-row: 3 / span 1;
+    display: flex;
+    justify-content: center;
+}

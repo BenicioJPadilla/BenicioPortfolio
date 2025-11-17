@@ -1,86 +1,370 @@
-html, body {
+/*html, body {
     margin: 0;
     padding: 0;
-    font-family: "Stack Sans Notch", sans-serif;
+    font-family: "Saved By Zero","Stack Sans Notch", sans-serif;
     background-image: linear-gradient(145deg,#393c44,#0a0d13,#222732);
     color: #ffffff;
     font-size: 16px;
+    min-height: 100vh;
+    max-height: 100%;
+    overflow-x: hidden;
+}*/
+
+img {
+    max-width: 100%;
+    height: auto;
 }
 
-nav #name {
-    font-size: 2.5rem;
-    font-weight: bold;
-    background: linear-gradient(120deg,#98b3e5,#8f06b5);
-    -webkit-background-clip: text;
-    background-clip: text;
-    color: transparent;
-    margin-left: 3rem;
-    margin-top: 0.5rem;
-    text-shadow: 2px 2px 4px rgba(205, 100, 239, 0.6);
-    letter-spacing: .2rem;
-};
 
-nav{
-    display: block;
-    justify-content: space-between;
-    align-items: center;
-    padding: 1rem 2rem;
-    position: relative;
-};
-
-#links {
+.hero{
     display: flex;
-    gap: 3rem;
-    font-size: 1.2rem;
-    padding: 0rem 1rem;
-};
+    justify-content: space-between;
+    align-items: stretch;
+    padding: 0rem;
+    min-height: calc(100vh - 80px);
+    box-sizing: border-box;
+}
 
-a.nav-link {
-    color: #ffffff;
-    text-decoration: none;
-    transition: color 0.3s ease;
-    letter-spacing: 0.2rem;
-};
+
+#content {
+    flex: 2 1 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 2rem;
+    padding: 0 2rem;
+    
+}
+
 
 #intro-degree {
-    color: #cccccc;
     /*margin-top: 3rem;
-    margin-bottom: 2rem;*/
-    margin-left: 3rem;
+    margin-bottom: 2rem;
+    margin-top: 5rem;
+    margin-left: 7rem;
     text-align: center;
     letter-spacing: 0.1rem;
-    width: 462px;
-    height: 45px;
-};
+    width: 650px;
+    height: 60px;*/
+    text-align: center;
+}
 
 h1.degree {
-    font-size: .2rem;
+    font-size: 1.3rem;
+    font-weight: 400;
+    letter-spacing: .2rem;
+    margin:0;
+}
+
+#intro-introduction {
+    /*color: #ffffff;
+    margin-top: 3rem;
+    margin-left: 5rem;
+    text-align: center;
+    letter-spacing: 0.2rem;
+    width: 700px;
+    height: 300px;*/
+    text-align: center;
+    margin-left: .5rem;
+}
+
+#introduction{
+    font-size: 2.2rem;
     font-weight: 600;
-    margin-bottom: 0.5rem;
-};
+    letter-spacing: .2rem;
+    line-height: 1.3;
+    margin: 0;
+}
 
-@media screen and (max-width: 768px) {
-    .nav-links {
-        display: none;
+.label-row {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.label-row .label {
+    font-size: 1.5rem;
+    font-weight: 500;
+    letter-spacing: .2rem;
+    margin: 0;
+}
+
+#skill-icons, #contact-icons {
+    display: flex;
+    align-items: center;
+    gap: 1.2rem;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.skill-icons:hover, .contact-icons:hover {
+    transform: scale(1.3);
+    transition: transform 0.25s ease;
+}
+
+.phoneNumber:hover {
+    transform: scale(1.1);
+    transition: transform 0.25s ease;
+}
+
+#skill-icons img {
+    width: 3rem;
+    height: 3rem;
+}
+
+.contact-icons img {
+    width: 2.6rem;
+    height: 2.6rem;
+}
+#skill-icons img  {
+    background: rgba(205, 100, 239, 0.6);
+    backdrop-filter: blur(11px) saturate(100%);
+    -webkit-backdrop-filter: blur(11px) saturate(100%);
+    border-radius: 20px;
+    border: 5px solid rgba(155, 94, 216, 0.25);
+}
+
+.contact-icons {
+    background:rgba(205, 100, 239, 0.6);
+    backdrop-filter: blur(11px) saturate(100%);
+    -webkit-backdrop-filter: blur(11px) saturate(100%);
+    border-radius: 20px;
+    border: 5px solid rgba(155, 94, 216, 0.25);
+}
+
+
+#benicio-image {
+    flex: 1 0 45%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+#benicio-picture {
+    max-height: 90vh;
+    height: auto;
+    width: auto;
+    display: block;
+    object-fit: contain;
+    filter: drop-shadow(0 0 0.75rem rgb(0, 0, 0));
+    border-radius: 999px;
+    /*border: 5px solid rgba(0, 0, 0, 0.25);*/
+    
+}
+
+/*@media screen and (min-width: 1750px){
+    #introduction {
+        font-size: 3rem;
+    }
+    h1.degree {
+        font-size: 2.3rem;
+}
+}*/
+@media screen and (max-width: 1250px) {
+    .hero {
         flex-direction: column;
-        text-align: center;
+        align-items: center;
+        justify-content: flex-start;
+        padding: 2rem 1.5rem;
+        min-height: auto;
+    }
+
+    #content {
+        flex: 0 0 auto;
+        max-width: 100%;
         width: 100%;
-        background-color: #014f7f;
-        padding: 1rem 0;
-        z-index: 1000;
-        position: absolute;
-        top: 100px;
-        /* Adjust based on your navbar height */
-        left: 0;
-        z-index: 10;
+        display:flex;
+        flex-direction:column;
+        align-items: center;
+        text-align: center;
+        gap: 2rem;
+        padding: 0;
     }
 
-    .nav-links.active {
-        display: flex;
+    #intro-degree, #intro-introductions, .label-row {
+        text-align: center;
+        justify-content: center;
+        margin-top: 2rem;
+
     }
 
-    .menu-toggle {
-        display: block;
+    #benicio-image {
+        flex: 0 0 auto;
+        justify-content: center;
+        width: 100%;
+        margin: 0;
+    }
+    #benicio-picture {
+        max-height: 40vh;
+        width: auto;
     }
 
+    nav {
+        display:flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 1rem 1.5rem;
+        box-sizing: border-box;
+        margin-top: .5rem;
+    }
+        #links {
+            display: flex;
+            gap: 2.5rem;
+            font-size: 1.1rem;
+            margin-left: 0;
+            /* remove auto push */
+            margin-top: 0.5rem;
+        }
+    #name {
+        font-size: 1rem;
+        margin-bottom: .5rem;
+    }
+}
+
+/* Additional media query for screens smaller than 1100px 
+    hero stops forcing overflow on phones
+*/
+@media (max-width: 1100px){
+    .hero {
+        flex-direction: column;
+        align-items: center;
+        justify-content: flex-start;
+        padding: 2rem 1.5rem;
+        min-height: auto;
+    }
+
+    #content {
+        max-width: 700px;
+        width: 100%;
+        align-items: center;
+        text-align: center;
+    }
+
+    #benicio-image {
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        margin-top: 1.5rem;
+    }
+    #benicio-picture {
+        max-height: 45vh;
+        width: auto;
+    }
+}
+
+@media (max-width: 700px){
+    nav {
+        padding: .75rem 1rem;
+    }
+
+    nav #name {
+        font-size: 1.4rem;
+    }
+    #links {
+        gap: 1rem;
+        font-size: .9rem;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    h1.degree {
+        font-size: 1.3rem;
+    }
+
+    #introduction {
+        font-size: 2rem;
+        letter-spacing: .05rem;
+        margin-left: 0;
+    }
+    #intro-introduction {
+        margin-left: 0;
+    }
+}
+
+/* Fade-in keyframes */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes slideInLeft {
+    from {
+        opacity: 0;
+        transform: translateX(60px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+/* Start hidden, then fade in */
+header,
+.hero {
+    opacity: 0;
+    animation: fadeIn 0.8s ease-out forwards;
+}
+
+/* Staggered fade-in for inner sections */
+#intro-degree,
+#intro-introduction,
+#intro-skills,
+#intro-contact {
+    opacity: 0;
+    animation: fadeInUp 0.8s ease-out forwards;
+}
+
+/* Delays to make them come in one after another */
+#intro-degree {
+    animation-delay: 0.1s;
+}
+
+#intro-introduction {
+    animation-delay: 0.25s;
+}
+
+#intro-skills {
+    animation-delay: 0.4s;
+}
+
+#intro-contact {
+    animation-delay: 0.55s;
+}
+
+#benicio-image {
+    opacity: 0;
+    animation: slideInLeft 0.8s ease-out forwards;
+    animation-delay: 0.6s;
+}
+
+/* Respect users who disable motion */
+@media (prefers-reduced-motion: reduce) {
+    * {
+        animation: none !important;
+        transition: none !important;
+    }
 }

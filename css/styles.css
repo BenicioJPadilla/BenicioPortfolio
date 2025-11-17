@@ -1,0 +1,127 @@
+@font-face {
+    font-family:"Saved by Zero";
+    src: url(../fonts/Saved\ by\ Zero\ Rg.otf) format("opentype");
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+html,
+body {
+    margin: 0;
+    padding: 0;
+    font-family: "Saved By Zero", "Stack Sans Notch", sans-serif;
+    background-image: linear-gradient(145deg, #393c44, #0a0d13, #222732);
+    color: #ffffff;
+    font-size: 16px;
+    min-height: 100vh;
+    max-height: 100%;
+    overflow-x: hidden;
+    overscroll-behavior-y: none;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    padding: 1rem 2rem;
+    box-sizing: border-box;
+    margin-top: .75rem;
+}
+
+nav #name {
+    font-size: 2.75rem;
+    font-weight: bold;
+    background: linear-gradient(120deg, #98b3e5, #8f06b5);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    /*margin-left: 2rem;*/
+    text-shadow: 2px 2px 4px rgba(205, 100, 239, 0.6);
+    letter-spacing: .2rem;
+    white-space: nowrap;
+}
+
+
+#links {
+    display: flex;
+    gap: 4.5rem;
+    font-size: 1.4rem;
+    padding-right: 0;
+    margin-left: auto;
+
+    background: rgba(58, 54, 61, 0.8);
+    backdrop-filter: blur(11px) saturate(100%);
+    -webkit-backdrop-filter: blur(11px) saturate(100%);
+    border-radius: 999px;
+    border: 10px solid rgba(46, 42, 42, 0.125);
+}
+
+a.nav-link {
+    color: #ffffff;
+    text-decoration: none;
+    transition: color 0.3s ease, transform 0.25s ease;
+    letter-spacing: 0.2rem;
+}
+
+a.nav-link:hover {
+    color: #4e5b72;
+    transform: scale(1.1);
+}
+
+
+@media screen and (max-width: 1250px) {
+    nav {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 1rem 1.5rem;
+        box-sizing: border-box;
+        margin-top: .5rem;
+    }
+
+    #links {
+        display: flex;
+        gap: 2.5rem;
+        font-size: 1.1rem;
+        margin-left: 0;
+        /* remove auto push */
+        margin-top: 0.5rem;
+    }
+
+    #name {
+        font-size: 1rem;
+        margin-bottom: .5rem;
+    }
+}
+
+
+
+@media (max-width: 700px) {
+    nav {
+        padding: .75rem 1rem;
+    }
+
+    nav #name {
+        font-size: 1.4rem;
+    }
+
+    #links {
+        gap: 1rem;
+        font-size: .9rem;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+
+}
