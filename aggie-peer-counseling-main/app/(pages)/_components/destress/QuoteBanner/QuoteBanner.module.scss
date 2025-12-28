@@ -1,0 +1,34 @@
+.banner {
+  position: relative;
+  width: 100%;
+  height: 322px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  
+}
+
+.background1 {
+  background-image: url("/images/ExercisePageBanner1/ExercisePageBanner1/background.svg");
+  background-position: center;
+  background-size: cover;
+}
+
+.background2 {
+  background-image: url("/images/ExercisePageBanner2/ExercisePageBanner2/background.svg");
+  background-position: center;
+  background-size: cover;
+}
+
+.text {
+  width: 100%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  text-align: center;
+  font-size: 1.25rem;
+  padding: 40px;
+}

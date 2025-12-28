@@ -1,0 +1,56 @@
+.programSection {
+    background-image: url('/images/grass.png');
+    padding: 60px 20px;
+    text-align: center;
+}
+
+.title {
+    font-size: 2.5rem;
+    margin-bottom: 40px;
+    font-weight: 600;
+}
+
+.cardContainer {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 40px;
+}
+
+.card {
+    background: #ffffff;
+    border-radius: 20px;
+    padding: 20px 30px;
+    //width: 100%;
+    text-align: left;
+    width: 423.37px;
+    flex-shrink: 0;
+
+    font-family: 'Jua';
+    font-size: 1rem;
+    font-weight: 400;
+}
+
+.card h2 {
+    font-size: 1.5rem;
+    margin-top: 0;
+}
+
+.card ul {
+    padding-left: 20px;
+}
+
+.bulletsDiv {
+    padding-top: 20px;
+}
+
+@media (max-width: 768px) {
+    .cardContainer {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+.card p+p {
+    margin-top: 16px;
+}

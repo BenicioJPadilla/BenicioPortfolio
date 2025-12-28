@@ -41,14 +41,15 @@ header {
 nav {
     display: flex;
     align-items: center;
-    padding: 1rem 2rem;
+    justify-content: center;
+
+    padding: .5rem 2rem;
     box-sizing: border-box;
     position: static;
     z-index: 1000;
 }
 
 nav #name {
-    font-size: 2.75rem;
     font-weight: bold;
     background: linear-gradient(120deg, #98b3e5, #8f06b5);
     -webkit-background-clip: text;
@@ -66,7 +67,8 @@ nav #name {
     gap: 4.5rem;
     font-size: 1.4rem;
     padding-right: 0;
-    margin-left: auto;
+    /*margin-left: auto;*/
+    
 
     background: rgba(58, 54, 61, 0.8);
     backdrop-filter: blur(11px) saturate(100%);

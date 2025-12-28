@@ -1,0 +1,116 @@
+@use '@/app/(pages)/_globals/mixins.scss';
+
+.directory {
+    position: sticky;
+    top: 1.5rem;    
+    max-width: 20rem;
+    @include mixins.med-desktop {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+}
+
+.titleBox {
+    height: 5rem;
+    border-radius: 1.25rem;
+    border: 1px solid var(--sunset-orange);
+    background: var(--sunset-peach);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 1.88rem;
+    @include mixins.fontStyle(2.5rem, 400, normal, 'JejuMyeongjo');
+    @include mixins.med-desktop {
+        width: 22rem;
+        margin-bottom: 1.25rem;
+    }
+    @include mixins.tablet {
+        @include mixins.fontStyle(1.5rem, 400, normal, 'JejuMyeongjo');
+        height: 4rem;
+        width: 15rem;
+        border-radius: 1rem;
+        margin-bottom: 1rem;
+    }
+    @include mixins.phone {
+        @include mixins.fontStyle(1.5rem, 400, normal, 'JejuMyeongjo');
+        height: 3.5rem;
+        width: 11rem;
+        border-radius: 0.9rem;
+        margin-bottom: 0.8rem;
+    }
+}
+
+.body {
+    background: var(--sunset-peach);
+    border-radius: 1.25rem;
+    border: 1px solid var(--sunset-orange);
+    padding: 3.61rem 0rem;
+    padding-left: 1.38rem;
+    padding-right: 3rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+
+    @include mixins.med-desktop {
+        width: 69.25rem;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        padding: 1.75rem 2rem;
+        padding-bottom: 1.25rem;
+        text-align: center;
+        flex-wrap: wrap;
+    }
+    @include mixins.tablet {
+        width: 40.75rem;
+        flex: 1;
+        text-align: center;
+        padding: 1.25rem 1.5rem;
+        padding-bottom: 0.9rem;
+        border-radius: 1rem;
+    }
+    @include mixins.phone {
+        width: 19.625rem;
+        flex: 1;
+        text-align: center;
+        gap: 1rem;
+        padding: 1.2rem 1.5rem;
+        padding-bottom: 0.7rem;
+    }
+}
+
+.text {
+    cursor: pointer;
+    text-decoration: underline;
+    @include mixins.fontStyle(1.5rem, 400, normal, 'JejuMyeongjo');
+    &:link, &:hover, &:visited, &:active {color: black;}
+    @include mixins.med-desktop {
+        flex: 1;
+    }
+    @include mixins.tablet {
+        @include mixins.fontStyle(.95rem, 400, normal, 'JejuMyeongjo');
+    }
+}
+
+.accommodationsText {
+    @include mixins.fontStyle(1.5rem, 400, normal, 'JejuMyeongjo');
+    @include mixins.med-desktop {
+        flex: wrap;
+        @include mixins.fontStyle(1.25rem, 400, normal, 'JejuMyeongjo');
+        padding-top: 0.5rem
+    }
+    @include mixins.tablet {
+        @include mixins.fontStyle(.85rem, 400, normal, 'JejuMyeongjo');
+        padding-top: 0rem
+    }
+    @include mixins.phone {
+        padding-top: 0.5rem;
+        @include mixins.fontStyle(.78rem, 400, normal, 'JejuMyeongjo');
+    }
+}
+
+.link {
+    &:link, &:hover, &:visited, &:active {color: black;}
+  }

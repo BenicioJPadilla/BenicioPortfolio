@@ -1,0 +1,8 @@
+.bullet {
+    padding-left: 1.75rem;
+    list-style-type: disc;
+  }
+  
+.link {
+    &:link, &:hover, &:visited, &:active {color: black;}
+  }

@@ -1,0 +1,144 @@
+
+.card {
+    position: relative;
+    width: 281px;
+    aspect-ratio: 0.72;
+    background: #F4DA9D;
+    border: 0.0625rem solid #8D4D13; /* 1px */
+    border-radius: 1.25rem; /* 20px */
+    padding: 1.25rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.25rem;
+}
+
+.imageContainer {
+    width: 12rem; /* 192px */
+    height: 12rem; /* 192px */
+    border-radius: 1.25rem; /* 20px */
+    background-color: rgba(255, 255, 255, 0.1);
+    overflow: hidden;
+    margin-top: 1rem; /* Add some space from top */
+}
+
+.cardInfo {
+    width: 100%;
+    text-align: center;
+}
+
+.soundTitle {
+    font-size: 1.25rem;
+    color: #8D4D13;
+    margin-bottom: 1rem;
+    font-family: 'Jua';
+    text-align: left;      // Add this
+    margin-left: 1rem;     // Add some left margin for spacing
+}
+
+.controls {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.playButton {
+    width: 2.5rem; /* 40px */
+    height: 2.5rem; /* 40px */
+    border-radius: 50%;
+    border: none;
+    background: white;
+    position: relative;
+    cursor: pointer;
+    transition: transform 0.2s ease;
+
+    &::before {
+        content: '';
+        position: absolute;
+        top: 50%;
+        left: 55%;
+        transform: translate(-50%, -50%);
+        width: 0;
+        height: 0;
+        border-top: 0.5rem solid transparent;
+        border-left: 0.75rem solid #333;
+        border-bottom: 0.5rem solid transparent;
+        transition: all 0.2s ease;
+    }
+
+    &.pause::before {
+        border: none;
+        width: 0.75rem;
+        height: 0.75rem;
+        background: #333;
+        box-shadow: 0.375rem 0 0 #333;
+    }
+
+    &:hover {
+        transform: scale(1.1);
+    }
+
+    &:active {
+        transform: scale(0.95);
+    }
+}
+
+.largeImage {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 1.25rem; /* 20px */
+}
+
+.overlayImage {
+    position: absolute; /* Position the smaller image on top of the larger image */
+    bottom: 3.4375rem; /* 55px / 16 = 3.4375rem */
+    right: 7.5rem; /* 120px / 16 = 7.5rem */
+    z-index: 1; /* Ensure it appears above the larger image */
+    transition: transform 0.2s ease, box-shadow 0.2s ease, background-color 0.2s ease; /* Add smooth animations */
+    box-shadow: 0px 0.25rem 0.375rem rgba(0, 0, 0, 0.2); /* 4px / 16 = 0.25rem, 6px / 16 = 0.375rem */
+    border-radius: 50%; /* Make the button circular */
+}
+
+.overlayImage:active {
+    transform: scale(0.85); /* Scale down the button slightly when pressed */
+    box-shadow: 0px 0.125rem 0.25rem rgba(0, 0, 0, 0.4); /* 2px / 16 = 0.125rem, 4px / 16 = 0.25rem */
+    background-color: rgba(255, 255, 255, 0.8); /* Add a lighter background color */
+    filter: brightness(1.2); /* Slightly brighten the button */
+}
+
+.progressRow {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 1.25rem;
+}
+
+.progressBar {
+    width: 90%;
+    height: 0.25rem;
+    background: #DDB087;
+    border-radius: 0.125rem;
+}
+
+.controlsRow {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 1.5rem;
+    padding: 0 2.5rem;
+}
+
+.sideCircle {
+    width: 1.25rem;
+    height: 1.25rem;
+    background: #DDB087;
+    border-radius: 50%;
+}
+
+.controls {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

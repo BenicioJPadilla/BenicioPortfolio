@@ -1,0 +1,48 @@
+@use '@/app/(pages)/_globals/mixins.scss';
+
+.page {
+  h1 {
+    color: var(--gold);
+  }
+}
+
+.resourcesContainer {
+  background-color: var(--sunset-milk);
+  padding: 5.25rem 1rem;
+}
+
+.resourcesBody {
+  justify-content: center;
+  position: relative;
+  background-color: var(--sunset-milk); 
+  display: flex;
+  flex-direction: row;
+  gap: 1.5rem;
+  @include mixins.med-desktop {
+    flex-direction: column;
+    align-items: center;
+    gap: 2.3rem;
+  }
+  @include mixins.phone {
+    gap: 1.5rem
+  }
+}
+
+.cardContainer {
+  display: flex;
+  flex-direction: row;
+  gap: 1.5rem;
+  @include mixins.phone {
+    flex-direction: column;
+  }
+} 
+
+.column {
+  display: flex;
+  flex-direction: column;
+  gap: 2.3rem;
+  @include mixins.phone {
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+}

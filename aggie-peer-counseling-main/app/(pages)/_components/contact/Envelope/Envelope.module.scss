@@ -1,0 +1,103 @@
+@use '@/app/(pages)/_globals/mixins.scss';
+
+.envelope {
+    background-image: url('/images/contact_envelope.svg');
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    
+    width: 699px;
+    height: 701px;
+    position: absolute;
+    top: 112px;
+    right: 156px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 130px;
+
+    @include mixins.tablet {
+        width: 26.5125rem;
+        height: 26.85rem;
+        position: absolute;
+        top: 200px;
+        left: 50%;
+        right: none;
+        transform: translateX(-50%);
+        padding-top: 80px;
+    }
+}
+
+.title {
+    @include mixins.fontStyle(3.125rem, 400, normal, 'Playfair');
+    color: var(--sunrise-smoke) !important; 
+    text-align: center;
+    letter-spacing: .1rem;
+    margin-bottom: 5px;
+    @include mixins.tablet {
+        @include mixins.fontStyle(1.875rem, 400, normal, 'Playfair');
+        letter-spacing: .06rem;
+        margin-bottom: .45rem;
+    }
+}
+
+.subtext {
+    @include mixins.fontStyle(0.9375rem, 400, normal, 'Jua');
+    text-align: center;
+    @include mixins.tablet {
+        @include mixins.fontStyle(0.5625rem, 400, normal, 'Jua');
+    }
+}
+
+.logobubble {
+    background-color: var(--sunrise-sage);
+    width: 4.625rem;
+    height: 4.625rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    margin-bottom: 0.2rem;
+    cursor: pointer;
+    transition: transform 0.15s ease;
+    &:hover {
+        transform: scale(1.05);
+    }
+    @include mixins.tablet {
+        width: 2.775rem;
+        height: 2.775rem;
+    }
+}
+
+.logoSize {
+    font-size: 2.4rem;
+    line-height: 0;
+    @include mixins.tablet {
+        font-size: 1.44rem;
+    }
+}
+
+.logoWrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-left: 2rem;
+    @include mixins.tablet {
+        margin-left: 1.2rem;
+    }
+}
+
+.logosWrapper {
+    display: flex;
+    justify-content: center;
+    gap: 3rem;
+    margin-bottom: 10rem;
+    margin-top: 1.5rem;
+    @include mixins.tablet {
+        margin-bottom: 6rem;
+        margin-top: 0.9rem;
+        gap: 1.8rem;
+    }
+}

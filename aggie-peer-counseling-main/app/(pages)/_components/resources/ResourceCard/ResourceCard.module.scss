@@ -1,0 +1,115 @@
+@use '@/app/(pages)/_globals/mixins.scss';
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
+
+.card {
+    break-inside: avoid;
+    background-color: var(--sunset-sand);
+    border: 0.063rem, solid;
+    border-radius: 1.875rem;
+    @include mixins.fontStyle(2rem, 400, normal, 'JejuMyeongjo');
+    width: 33.875rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;  
+    text-align: center;
+    padding: 3.12rem 0;
+    gap: 1.81rem;
+    @include mixins.tablet {
+        width: 19.625rem;
+        @include mixins.fontStyle(1.25rem, 400, normal, 'JejuMyeongjo');
+        padding: 2rem 0;
+        gap: 1rem;
+        border-radius: 1.5625rem;
+      }
+}
+
+.dropdownButton {
+    width: 31.3125rem;
+    height: 8.625rem;
+    background-color: var(--sunset-peach);
+    border: 0.063rem, solid;
+    border-radius: 1.25rem;
+    border-color: var(--sunset-orange);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;  
+    gap: 0.44rem;
+    cursor: pointer;
+    transition: height 0.5s ease;
+    @include mixins.tablet {
+        border-radius: 1rem;
+        width: 17.1875rem;
+        height: 5.75rem;
+      }
+}
+
+.dropdownButtonBox {
+    width: 24rem;
+    height: 4.313rem;
+    border-radius: 1.25rem;
+    background-color: var(--sunset-honey);
+    @include mixins.fontStyle(1.5rem, 400, normal, 'Jua');
+    display: flex;
+    justify-content: center;
+    align-items: center;  
+    text-align: center;
+    @include mixins.tablet {
+        width: 13.5rem;
+        height: 3.75rem;
+        @include mixins.fontStyle(1rem, 400, normal, 'Jua');
+        border-radius: 1rem;
+      }
+}
+
+.dropdownButtonBoxText {
+    padding: 0 0.82rem;
+    @include mixins.tablet {
+        padding: 0rem .5rem;
+      }
+}
+
+.dropdownSVG {
+    height: 3.875rem;
+    width: 3.875rem;
+    position: relative;
+    user-select: none;
+    transition: transform .25s ease;
+    @include mixins.tablet {
+        width: 1.5rem;
+        height: 1.5rem;
+      }
+}
+
+.dropdownSVG.rotated {
+    transform: rotate(180deg); 
+}
+
+.boxAndSVG {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 2.16rem 0;
+    @include mixins.tablet {
+        padding: 1rem 0rem;
+        gap: .3rem;
+      }
+}
+
+.expandedText {
+    width: 28.3125rem; 
+    text-align: left;
+    @include mixins.fontStyle(1.25rem, 400, normal, 'Jua');
+    padding-bottom: 2.13rem;
+    animation: fadeIn 0.75s ease-in forwards;
+    @include mixins.tablet {
+        @include mixins.fontStyle(0.75rem, 400, normal, 'Jua');
+        width: 15rem; 
+        padding-bottom: 1.5rem;
+      }
+}

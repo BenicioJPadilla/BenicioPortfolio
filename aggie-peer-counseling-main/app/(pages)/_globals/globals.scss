@@ -1,0 +1,81 @@
+@use './mixins.scss';
+
+// @import url('https://db.onlinewebfonts.com/c/1a5c2d8bbd4e28d99a6efcbb9a5b378f?family=JejuMyeongjo');
+// @import url('https://fonts.googleapis.com/css2?family=Jua&display=swap');
+// @import url('https://fonts.googleapis.com/css2?family=Cairo+Play:wght@200..1000&family=Coming+Soon&family=Playfair:ital,opsz,wght@0,5..1200,300..900;1,5..1200,300..900&display=swap');
+
+@font-face {
+  font-family: 'JejuMyeongjo';
+  src: url('/fonts/JejuMyeongjo.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+}
+
+:root {
+  // Common Colors
+  --white: #FFFFFF;
+  --black: #222;
+
+  // Homepage / Day Theme
+  --day-cream: #F0EEE8;
+  --day-blush: #F1C8D0;
+  --day-olive: #81916E;
+  --day-sky: #B1D2EF;
+  --day-mint: #C0D6BB;
+  --day-cloud: #C9E9FF;
+  --day-rose: #E2A7AF;
+  --day-sun: #FFF2C9;
+  --day-grass: #76AF7A;
+
+  // Resources Page / Sunset Theme
+  --sunset-forest: #678B64;
+  --sunset-herb: #80A177;
+  --sunset-rosewood: #A8747B;
+  --sunset-mint: #C0D6BB;
+  --sunset-sand: #FEE5BE;
+  --sunset-peach: #FFD5A5;
+  --sunset-honey: #FFE7C0;
+  --sunset-milk: #FCF1D1;
+  --sunset-orange: #F6992F;
+
+  // De-Stress / Night Theme
+  --night-ocean: #4E6F98;
+  --night-fog: #6F8EBC;
+  --night-deep: #1E3666;
+  --night-lavender: #BBCEDF;
+  --night-moon: #F4DA9D;
+  --night-candle: #DDB087;
+  --night-dream: #B8B7E8;
+
+  // Contact Page
+  --sunrise-sage: #A9BFA0;
+  --sunrise-smoke: #393030;
+
+  // Brand Gradient
+  --aggie-gradient: linear-gradient(200deg, #04164F 7.1%, #3D1069 62.03%, #750B83 94.99%);
+}
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  background-color: var(--white);
+  font-family: 'JejuMyeongjo', serif;
+  color: var(--black);
+
+}
+
+h1 {
+  @include mixins.fontStyle(4rem, 700, normal, 'JejuMyeongjo');
+}
+
+h2 {
+  @include mixins.fontStyle(2rem, 700, normal, 'Jua');
+}
+
+p {
+  @include mixins.fontStyle(1rem, 400, 1.5, 'Jua');
+}

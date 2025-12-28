@@ -1,0 +1,146 @@
+@use 'app/(pages)/_globals/mixins.scss';
+
+.mentorsSection {
+  position: relative;
+  padding: 5rem 1rem;
+  background-color: #fdfcf7;
+  overflow: hidden;
+  text-align: center;
+  min-height: 100vh;
+
+  background-image: url('/images/mentors/leaves.svg');
+  background-repeat: repeat;
+  background-size: cover;
+  background-position: center;
+  background-size: 130%;
+
+  @include mixins.phone {
+    background-image: url('/images/mentors/leavesmobile.svg'); // ✅ swap background
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: top center;
+  }
+}
+
+
+.background {
+  position: absolute !important;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 0;
+  pointer-events: none;
+  transform: translateY(60px); 
+}
+
+.title {
+  font-size: 2.5rem;
+  margin-bottom: 5rem;
+  margin-top: -1rem; 
+  position: relative;
+  z-index: 1;
+
+  @include mixins.phone {
+    font-size: 2rem;
+    margin-bottom: 3rem;
+  }
+}
+
+.mentorGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+  justify-content: center;
+  align-items: start;
+  max-width: 1000px;
+  margin: 0 auto;
+  position: relative;
+  z-index: 1;
+
+  @include mixins.phone {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 3rem;
+  }
+}
+
+.bottomRow {
+  grid-column: 1 / -1;
+  display: flex;
+  justify-content: center;
+  gap: 10rem;
+
+  @include mixins.phone {
+    flex-direction: column;
+    gap: 3rem;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: auto;
+    border-radius: 1rem;
+  }
+}
+
+.mentorCard {
+  display: flex;
+  flex-direction: column;
+  align-items: center; // center everything on desktop
+  width: 100%;
+  max-width: 280px;
+
+  @include mixins.phone {
+    align-items: center; // center the image
+    width: 80%;
+    max-width: 320px;
+  }
+}
+
+.mentorImage {
+  width: 100%;
+  height: auto;
+  border-radius: 0.5rem;
+  object-fit: cover;
+  display: block;
+
+  @include mixins.phone {
+    width: 176.733px;
+    height: 176.733px;
+    flex-shrink: 0;
+    border-radius: 1rem;
+  }
+}
+
+.mentorText {
+  margin-top: 0.5rem;
+  text-align: left;
+  width: 100%;
+
+  @include mixins.phone {
+    width: 176.733px; // match image width
+    text-align: left;
+  }
+
+  h2 {
+    font-size: 1.25rem;
+    color: #111;
+    margin: 0;
+
+    @include mixins.phone {
+      font-size: 1rem;
+      font-weight: 600;
+    }
+  }
+
+  p {
+    font-size: 0.75rem;
+    color: #555;
+    margin-top: 0.2rem;
+
+    @include mixins.phone {
+      font-size: 0.875rem;
+    }
+  }
+}

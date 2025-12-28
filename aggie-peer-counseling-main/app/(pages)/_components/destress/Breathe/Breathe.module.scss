@@ -1,0 +1,137 @@
+@use 'app/(pages)/_globals/mixins.scss';
+.breatheWrapper {
+  width: 100%;
+  overflow: hidden;
+  background-color: #225A7F;
+  background-image: url('/images/destress/breathe-cropped.svg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center top;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  @include mixins.phone {
+    position: relative;
+    height: auto;
+    background: none;
+    padding: 0;
+    overflow-y: auto;
+
+    &::before {
+      content: '';
+      display: block;
+      width: 100vw;
+      aspect-ratio: 720 / 1100;
+      background-image: url('/images/destress/breathemobile.svg');
+      background-size: 100% auto;
+      background-repeat: no-repeat;
+      background-position: center -4px; 
+    }
+  }
+}
+
+
+.circleContainer {
+  position: relative;
+  width: 300px;
+  max-width: 100%;
+  aspect-ratio: 1;
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  @include mixins.phone {
+    position: absolute;
+    top: 40%; // You can fine-tune this if needed
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+}
+
+.outerCircle {
+  width: 100%;
+  height: 100%;
+  flex-shrink: 0;
+  position: absolute;
+  border-radius: 50%;
+  background: #A9BED1;
+  z-index: 2;
+
+  @include mixins.phone {
+    width: 100%;
+    height: 100%;
+    flex-shrink: 0;
+  }
+}
+
+.timerRing {
+  width: 100%;
+  height: 100%;
+  flex-shrink: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 50%;
+  z-index: 3;
+
+  @include mixins.phone {
+    width: 100%;
+    height: 100%;
+    flex-shrink: 0;
+  }
+}
+
+.innerCircle {
+  width: 80%;
+  height: 80%;
+  flex-shrink: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: #DBE5ED;
+  border-radius: 50%;
+  z-index: 4;
+  animation: pulse 6s infinite ease-in-out;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  @include mixins.phone {
+    width: 80%;
+    height: 80%;
+    flex-shrink: 0;
+  }
+}
+
+.breatheText {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 1.5rem;
+  color: #000;
+  font-weight: bold;
+  text-align: center;
+  z-index: 5;
+  pointer-events: none;
+
+  @include mixins.fontStyle(2rem, 700, normal, 'Jua');
+
+  @include mixins.phone {
+    font-size: 2rem;
+  }
+}
+
+@keyframes pulse {
+  0%, 100% {
+    transform: translate(-50%, -50%) scale(1);
+  }
+  50% {
+    transform: translate(-50%, -50%) scale(1.1);
+  }
+}

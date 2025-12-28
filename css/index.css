@@ -19,11 +19,22 @@ img {
 .hero{
 
     display: flex;
-    justify-content: space-between;
-    align-items: stretch;
+    /*justify-content: space-between;*/
+    /*align-items: stretch;*/
     padding: 0rem;
     min-height: calc(100vh - 80px);
     box-sizing: border-box;
+}
+
+.intro-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    max-width: 900px;
+    margin: 0 auto;
+    width: 100vw;
 }
 
 
@@ -33,10 +44,20 @@ img {
     flex-direction: column;
     justify-content: center;
     gap: 2rem;
-    padding: 0 2rem;
+    padding: 0 3rem;
     
 }
 
+#name {
+    font-weight: bold;
+    background: linear-gradient(120deg, #98b3e5, #8f06b5);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    /*margin-left: 2rem;*/
+    text-shadow: 2px 2px 4px rgba(205, 100, 239, 0.6);
+    letter-spacing: .2rem;
+}
 
 #intro-degree {
     /*margin-top: 3rem;
@@ -140,7 +161,7 @@ h1.degree {
 
 
 #benicio-image {
-    flex: 1 0 45%;
+    flex: 1 0 50%;
     display: flex;
     justify-content: center;
     align-items: center;

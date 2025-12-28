@@ -1,0 +1,228 @@
+@use "../../../_globals/mixins.scss";
+
+.Footer {
+    &.HomeFooter {
+        background-color: var(--day-mint);
+    }
+
+    &.ResourcesFooter {
+        background-color: var(--sunset-peach);
+    }
+
+    &.DeStressFooter {
+        background-color: var(--night-fog);
+    }
+}
+    
+.FooterContainer {
+    padding: 93px 77px;
+    color: var(--black);
+    font-family: 'Jua';
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 100%;
+    min-height: 481px;
+
+    background-repeat: no-repeat;
+    background-size: 93% auto;
+    background-position: center calc(100% - 20px);
+    &.HomeFooter {
+        background-image: url("/images/footer/HomeBg.svg");
+    }
+
+    &.ResourcesFooter {
+        background-image: url("/images/footer/ResourcesBg.svg");
+    }
+
+    &.DeStressFooter {
+        color: var(--white);
+        background-image: url("/images/footer/DeStressBg.svg");    
+    }
+}
+
+.FooterColumnsWrapper {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    column-gap: 40px;
+}
+
+.FooterMain {
+    flex: 1;
+    max-width: 350px;
+    display: flex;
+    flex-direction: column;
+
+    h1 {
+        font-size: min(2vw, 34px);
+        font-weight: 400;
+        margin-bottom: 26px;
+        font-family: 'Jua';
+    }
+
+    p {
+        font-size: 14px;
+    }
+
+}
+
+.FooterColumn {
+    min-width: 150px;
+    display: flex;
+    flex-direction: column;
+
+    h2 {
+        font-size: min(2vw, 34px);
+        font-weight: 400;
+        margin-bottom: 12px;
+    }
+
+    ul {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+    }
+
+    li {
+        margin-top: 26px;
+        font-size: 14px;
+    }
+    
+    a { 
+        color: var(--black);
+        text-decoration: none;
+
+        &:hover {
+            text-decoration: underline;
+        }
+    }
+
+    &.DeStressFooter {
+        a {
+            color: var(--white);
+        }
+    }
+}
+
+
+.FooterBottom {
+    background-color: var(--white);
+    padding: 20px 30px;
+    display: flex;  
+    justify-content: space-between; 
+    align-items: center;
+    margin-top: auto;
+
+    p {
+        margin: 0;
+        font-size: 18px;
+    }
+}
+
+.FooterIcons {
+    display: flex;
+    gap: 15px;
+
+    a {
+        color: inherit;
+        font-size: 24px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+}
+
+.mobileLogo {
+    width: 154px;
+    height: 116px;
+    align-self: center;
+    display: none;
+}
+
+
+@include mixins.tablet {
+    .Footer {
+        background-repeat: no-repeat;
+        background-size: contain;
+        background-position: center;
+        &.HomeFooter {
+            background-image: url("/images/footer/mobileHomeBg.svg");
+        }
+
+        &.ResourcesFooter {
+            background-image: url("/images/footer/mobileResourcesBg.svg");
+        }
+
+        &.DeStressFooter {
+            background-image: url("/images/footer/mobileDeStressBg.svg");
+        }
+    }
+
+    .FooterMain {
+        align-items: center;
+        text-align: center;
+
+        h1 {
+            font-size: 1.5rem;
+        }
+
+        p {
+            display: none;
+        }
+    }
+
+    .FooterColumnsWrapper {
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+    }
+
+    .FooterColumn {
+        align-items: center;
+        text-align: center;
+        h2 {
+            font-size: 1.3rem;
+        }
+    }
+
+    .FooterBottom {
+        flex-direction: column-reverse;
+        gap: 10px;
+        text-align: center;
+        background-color: transparent;
+
+        &.DeStressFooter {
+            color: var(--white);
+        }
+    }
+
+    .FooterIcons {
+        justify-content: center;
+    }
+
+    .links {
+        display: none;
+    }
+
+    .FooterContainer {
+        min-height: 0;
+        padding: 20px 0px;
+        &.HomeFooter {
+            background-image: none;
+        }
+
+        &.ResourcesFooter {
+            background-image: none;
+        }
+
+        &.DeStressFooter {
+            background-image: none;    
+        }
+    }
+
+    .mobileLogo {
+        display: inline;
+    }
+}
+

@@ -1,0 +1,162 @@
+ // Import global styles
+ 
+.navbar {
+    position: absolute;
+    width: 100%;
+    z-index: 1000;
+    padding: 0.5rem 1rem;
+    display: flex;
+    background: transparent !important;
+    border: none;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+.nav-logo {
+    height: 5.563rem;
+    width: auto;
+    
+    @include sm-phone {
+        height: 70px;
+    }
+}
+
+.nav-contact {
+    a {
+        width: 7.375rem;
+        height: 3.063rem;
+        flex-shrink: 0;
+        padding: 0.5rem 1.5rem;
+        border: none; 
+        border-radius: 62.438rem; 
+        background: var(--day-sun);
+        color: var(--black); 
+        transition: all 0.3s ease; 
+    }
+
+    a:hover {
+        background-color: var(--day-sun);
+        color: var(--white);
+    }
+}
+
+
+.nav-links {
+    display: flex;
+    gap: 2rem;
+    list-style: none;
+
+    @include phone {
+        display: none;
+    }
+
+    .nav-link {
+        a {
+            flex-shrink: 0;
+            text-decoration: none;
+            transition: color 0.3s ease;
+            color: var(--black);
+            color: #000;
+            font-family: 'JejuMyeongjo';
+            font-size: 1.477rem;
+            font-style: normal;
+            font-weight: 400;
+            line-height: normal;
+
+            &:hover {
+                opacity: 0.7;    
+            }
+        }
+    }
+
+    .destressLinkColor {
+        a {
+            color: white
+        }
+    }
+}
+
+/* Styles based on the route */
+.navbar-morning .nav-link a {
+    color: var(--black); 
+}
+
+.navbar-noon .nav-link a {
+    color: var(--black); 
+}
+
+.navbar-night .nav-link a {
+    color: var(--white); 
+}
+
+.navbar-contact .nav-link a {
+    color: var(--black); 
+}
+
+.navbar-night .nav-contact a {
+    background-color: var(--night-moon);
+    color: var(--black);
+}
+
+.hamburger {
+    display: none;
+    //padding: 10px;
+    margin-right: 20px;
+    background-color: transparent;
+    border: none;
+    //border-radius: 10px;
+    //box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+
+    @include phone {
+        display: block;
+    }
+}
+
+.hamburgerIcon {
+    color: white;
+}
+
+.outline {
+    color: gray;
+}
+
+.mobileMenu {
+    display: none;
+    position: absolute;
+    top: 100px;
+    width: 100%;
+
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    
+    padding-top: 5px;
+    padding-bottom: 5px;
+    background-color: rgba(217, 217, 217, 0.726);
+    
+    overflow: hidden;
+    transition: height 0.4s ease, opacity 0.3s ease;
+
+    @include phone {
+        display: flex;
+    }
+}
+
+.expand {
+  height: 30px; /* Your known height */
+  opacity: 1;
+}
+
+.collapse {
+  height: 0;
+  opacity: 0;
+}
+
+.menuLink {
+    text-decoration: none;
+    font-family: 'Jua';
+    font-size: 1rem;
+    text-align: center;
+    color: black;
+}
