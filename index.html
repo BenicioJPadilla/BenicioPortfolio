@@ -20,15 +20,15 @@
       <nav>
         <!-----<div id="name">BENICIO J. PADILLA</div>----->
         <div id="links">
-          <a href="index.html" class="nav-link nav-link-home">HOME</a>
-          <a href="projects.html" class="nav-link nav-link-projects" >PROJECTS</a>
-          <a href="aboutme.html" class="nav-link nav-link-aboutme" >ABOUT ME</a>
+          <a href="#main-hero" class="nav-link nav-link-home">HOME</a>
+          <a href="#projects-section" class="nav-link nav-link-projects" >PROJECTS</a>
+          <a href="#about-section" class="nav-link nav-link-aboutme" >ABOUT ME</a>
         </div>
       </nav>
     <script src="js/navbar.js"></script>
     </header>
 
-    <main class="hero">
+    <main class="hero" id="main-hero">
       <div id="intro-container">
       <div id="content">
         <div id="intro-degree">
@@ -43,8 +43,8 @@
 
         <div id="intro-introduction">
           <h2 id="introduction">
-            Hi, I'M <span id="name">BENICIO PADILLA</span> A CREATIVE MINDED STUDENT WITH A PASSION FOR WEB
-            DEVELOPMENT AND BEING A DEDICATED TEAMATE
+            Hi, I'M BENICIO PADILLA A CREATIVE MINDED STUDENT WITH A PASSION FOR WEB
+            DEVELOPMENT, FINDING SOLUTIONS TO ADMINISTRATIVE ISSUES, AND BEING A DEDICATED TEAMATE
           </h2>
         </div>
 
@@ -62,6 +62,7 @@
             <li><img class="skill-icons" src="/images/nodejslogo.png" /></li>
             <li><img class="skill-icons" src="/images/chromelogo.png" /></li>
             <li><img class="skill-icons" src="/images/githublogo.png" /></li>
+            <li><img class="skill-icons" src="/images/MongoDB.png" /></li>
           </ul>
         </div>
 
@@ -80,9 +81,9 @@
             <li style="font-size: 2rem;" class = "phoneNumber">(209)-303-1736</li>
           </ul>
         </div>
-      </div>
     </div>
-       <div class="hero-projects">
+    </div>
+       <div class="hero-projects" id="projects-section">
       <div id="content-projects-container">
         <h1 id="projects-title">PROJECTS</h1>
         <div class="project-items">
@@ -117,7 +118,7 @@
           <div class="project-item">
             <img
               class="project-image"
-              src="./images/todo-app-screenshot.png"
+              src="./images/logo.svg"
               alt="To-Do List App Screenshot"
             />
             <h2 class="project-title">AGGIE PEER COUNSELING</h2>
@@ -127,7 +128,10 @@
               project for #INCLUDE in which I was incharge of the Hero, Footer,
               and Navbar.
             </p>
-            <a href="./aggie-peer-counseling-main/app/(pages)/(home)/" target="_blank"
+            <a
+              href="https://github.com/include-davis/aggie-peer-counseling"
+              target="_blank"
+              class="arrow-icon"
               ><img
                 class="arrow-icon"
                 src="./images/up-right-arrow.png"
@@ -173,7 +177,7 @@
               A web-based to-do list application that allows users to add, edit,
               and delete tasks. Built with React and Node.js.
             </p>
-            <a href="https://www.shinedrive.co" target="_blank"
+            <a href="https://www.shinedrive.co" target="_blank" class="arrow-icon"
               ><img
                 class="arrow-icon"
                 src="./images/up-right-arrow.png"
@@ -191,23 +195,26 @@
           <div class="project-item">
             <img
               class="project-image"
-              src="./images/shinedrives_logo.png"
-              alt="Portfolio Website Screenshot"
+              src="./images/PRACTICESS.png"
+              alt="Login With Auth SS"
             />
             <ul id="skill-icons">
+              <li><img class="skill-icons" src="./images/nodejslogo.png" /></li>
               <li><img class="skill-icons" src="./images/htmllogo.png" /></li>
-              <li><img class="skill-icons" src="./images/csslogo.png" /></li>
               <li>
                 <img class="skill-icons" src="./images/javascriptlogo.png" />
               </li>
+              <li>
+                <img class="skill-icons" src="./images/csslogo.png" />
+              </li>
             </ul>
-            <h2 class="project-title">SHINEDRIVES CO</h2>
+            <h2 class="project-title">Login System With Authentication</h2>
             <p class="project-description">
               A company website for ShineDrives Co that showcases their services
               and contact.
             </p>
             <a
-              href="https://www.shinedrivesco.com"
+              href="https://login-system-production-83e5.up.railway.app/"
               target="_blank"
               class="arrow-icon"
               ><img
@@ -219,20 +226,44 @@
           <div class="project-item">
             <img
               class="project-image"
-              src="./images/todo-app-screenshot.png"
-              alt="To-Do List App Screenshot"
+              src="./images/Vitejs.png"
+              alt="React Practice Projects Screenshot"
             />
-            <h2 class="project-title">To-Do List Application</h2>
+            <h2 class="project-title">React Practice Projects</h2>
             <p class="project-description">
-              A web-based to-do list application that allows users to add, edit,
-              and delete tasks. Built with React and Node.js.
+              Focused on React fundamentals and hooks with mini builds like
+              clocks, forms, counters, and timers to sharpen syntax and state
+              management.
             </p>
-            <a href="https://www.shinedrive.co" target="_blank"
-              ><img
+            <div class="project-links">
+              <a
+                href="https://github.com/BenicioJPadilla/ReactPractice2"
+                target="_blank"
                 class="arrow-icon"
-                src="./images/up-right-arrow.png"
-                alt="Arrow Icon"
-            /></a>
+                ><img
+                  class="arrow-icon"
+                  src="./images/up-right-arrow.png"
+                  alt="Arrow Icon"
+              /></a>
+              <a
+                href="https://github.com/BenicioJPadilla/stopwatch-app"
+                target="_blank"
+                class="arrow-icon"
+                ><img
+                  class="arrow-icon"
+                  src="./images/up-right-arrow.png"
+                  alt="Arrow Icon"
+              /></a>
+              <a
+                href="https://github.com/BenicioJPadilla/ColorPickerBen"
+                target="_blank"
+                class="arrow-icon"
+                ><img
+                  class="arrow-icon"
+                  src="./images/up-right-arrow.png"
+                  alt="Arrow Icon"
+              /></a>
+            </div>
           </div>
           <div class="project-item-extra-project-2">
             <img
@@ -273,7 +304,7 @@
               A web-based to-do list application that allows users to add, edit,
               and delete tasks. Built with React and Node.js.
             </p>
-            <a href="https://www.shinedrive.co" target="_blank"
+            <a href="https://www.shinedrive.co" target="_blank" class="arrow-icon"
               ><img
                 class="arrow-icon"
                 src="./images/up-right-arrow.png"
@@ -286,7 +317,55 @@
         </div>
       </div>
     </div>
+    <section class="about-section" id="about-section">
+      <div class="about-inner">
+        <h1 class="about-title">ABOUT ME</h1>
+        <p class="about-lede">
+          I'm Benicio J. Padilla, a UC Davis computer science student focused on
+          building clean, user-first web experiences and exploring applied machine
+          learning.
+        </p>
+        <div class="about-grid">
+          <div class="about-card">
+            <h2>Education</h2>
+            <p>
+              University of California, Davis — B.S. Computer Science
+              <br />
+              Minor: Technology Management, Spanish
+              <br />
+              Estimated Graduation: 2028 • GPA: 3.7
+            </p>
+          </div>
+          <div class="about-card">
+            <h2>Experience</h2>
+            <p>
+              Machine Learning Student Network, UC Davis — Software Developer
+              <br />
+              #INCLUDE Club, UC Davis — Software Developer
+            </p>
+          </div>
+          <div class="about-card">
+            <h2>Technical Skills</h2>
+            <p>
+              Python, C/C++, HTML/CSS, JavaScript, React, Vite, Node.js, Express.js, MongoDB, Git, 
+              <br />
+              Tools: PyCharm, CLion, VS Code, Git, LaTeX
+            </p>
+          </div>
+          <div class="about-card">
+            <h2>Outside the Code</h2>
+            <p>
+              <br />
+              Sports: Golf, Soccer, Tennis, Pickleball, Hiking, Gym
+              <br />
+              Other Interests: Cryptocurrency Investing, Reading
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
     </main>
+    <script src="js/projects.js"></script>
   </body>
 
 </html>

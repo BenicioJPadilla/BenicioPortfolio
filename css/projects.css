@@ -98,6 +98,7 @@
     border-radius: 15px;
 }
 
+
 #skill-icons {
     display: flex;
     place-self: center;
@@ -133,6 +134,13 @@ a.arrow-icon {
     text-decoration: none;
     margin-top: 0.5rem;
     align-items: flex-end;
+}
+
+.project-links {
+    display: flex;
+    gap: 0.6rem;
+    justify-content: center;
+    margin-top: 0.5rem;
 }
 
 img.arrow-icon {
@@ -178,6 +186,9 @@ img.arrow-icon:hover {
     transition: background-color 0.3s ease;
     margin-bottom: 2rem;
     place-content: center;
+}
+#show-more-button-2 {
+    display: none;
 }
 #show-more-button:hover {
     background-color: rgba(111, 111, 111, 0.8);
