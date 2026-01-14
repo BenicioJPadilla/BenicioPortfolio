@@ -1,40 +1,31 @@
-# Shine Drives Co. – Pressure Washing Services Website
+# Benicio Padilla Portfolio
 
-Welcome to the official website for **Shine Drives Co.**, a local pressure washing service specializing in driveways, sidewalks, bricks, patios, gutters, and more.
+Personal portfolio site showcasing projects, skills, and background.
 
-This is a fully responsive static website built with **HTML**, **CSS**, and **vanilla JavaScript**, designed for both desktop and mobile users.
+## Overview
 
----
+- Single-page layout with hero, projects, and about sections
+- Responsive design for desktop and mobile
+- Project cards with external links
 
-## 🚀 Live Site:
-
-https
-
-## Features:
-
-- Fully responsive design
-- Mobile hamburger menu navigation
-- Full-screen hero section
-- Service overview with “About Us” section
-- Contact information
-- Social media links (Instagram, Facebook)
-- GitHub Pages hosted
-
----
-
-## Technologies Used:
+## Tech Stack
 
 - HTML5
-- CSS3 (Flexbox, Media Queries)
-- JavaScript (for mobile nav toggle)
-- GitHub Pages for deployment
+- CSS3
+- JavaScript (vanilla)
 
----
+## Local Development
 
-## Deployment Instructions (for cloning/forking):
+Open `index.html` in your browser.
 
-1. Clone this repo:
+## Structure
 
-```bash
-git clone https://github.com/BenicioJPadilla/ShineDrivesCO.git
- 
+- `index.html` - main page
+- `css/` - styling for layout and sections
+- `js/` - small scripts (navigation, projects)
+- `images/` - logos and project assets
+
+## Links
+
+- GitHub: https://github.com/BenicioJPadilla
+- LinkedIn: https://www.linkedin.com/in/benicio-j-padilla-409114344/

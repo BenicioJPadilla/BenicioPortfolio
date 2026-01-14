@@ -120,6 +120,8 @@
     font-weight: bolder;
     color: #ffffff;
     place-self: center;
+    text-align: center;
+    width: 100%;
 }
 
 .project-description {

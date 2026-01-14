@@ -32,11 +32,13 @@ img {
     height: auto;
 }
 header {
-    position: relative;
+    position: sticky;
     top: 0;
     width: 100%;
     z-index: 1000;
     padding-top: .75rem;
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
 }
 
 nav {
@@ -122,17 +124,7 @@ a.nav-link:hover {
 
 @media screen and (max-width: 1250px) {
     header{
-        position: sticky;
-            top: 0;
-            width: 100%;
-            z-index: 1000;
-            padding-top: .75rem;
-            /*background: rgba(10, 13, 19, 0);*/
-            backdrop-filter: blur(10px) ;
-            -webkit-backdrop-filter: blur(10px) ;
-            /*
-            background-image: linear-gradient(145deg, #393c44, #0a0d13, #222732);
-            background-attachment: fixed;*/
+        padding-top: .75rem;
     }
     nav {
         display: flex;
