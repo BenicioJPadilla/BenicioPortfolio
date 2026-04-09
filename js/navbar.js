@@ -11,82 +11,34 @@ document.addEventListener("DOMContentLoaded", () => {
     { id: "about-section", link: links.about },
   ];
 
-  const setActive = (hash) => {
-    Object.values(links).forEach((link) => link?.classList.remove("active"));
+  let currentLink = links.home;
 
-    if (hash === "#projects-section") {
-      links.projects?.classList.add("active");
-      return;
-    }
-
-    if (hash === "#about-section") {
-      links.about?.classList.add("active");
-      return;
-    }
-
-    links.home?.classList.add("active");
+  const setActive = (link) => {
+    if (link === currentLink) return;
+    Object.values(links).forEach((l) => l?.classList.remove("active"));
+    link?.classList.add("active");
+    currentLink = link;
   };
 
-  const setActiveById = (id) => {
-    const hash = id ? `#${id}` : "#main-hero";
-    setActive(hash);
+  const updateActive = () => {
+    const threshold = window.innerHeight * 0.4;
+    let active = sections[0];
+
+    for (const section of sections) {
+      const el = document.getElementById(section.id);
+      if (!el) continue;
+      const top = el.getBoundingClientRect().top;
+      if (top <= threshold) {
+        active = section;
+      }
+    }
+
+    setActive(active.link);
   };
 
-  setActive(window.location.hash);
-  window.addEventListener("hashchange", () => setActive(window.location.hash));
+  // Set initial state
+  updateActive();
 
-  if ("IntersectionObserver" in window) {
-    const ratios = new Map();
-    const observer = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((entry) => {
-          ratios.set(entry.target.id, entry.intersectionRatio);
-        });
-
-        let currentId = null;
-        let maxRatio = 0;
-
-        sections.forEach(({ id }) => {
-          const ratio = ratios.get(id) || 0;
-          if (ratio >= maxRatio) {
-            maxRatio = ratio;
-            currentId = id;
-          }
-        });
-
-        if (currentId && maxRatio > 0) {
-          setActiveById(currentId);
-        }
-      },
-      {
-        root: null,
-        rootMargin: "-20% 0px -55% 0px",
-        threshold: [0, 0.2, 0.4, 0.6],
-      }
-    );
-
-    sections.forEach(({ id }) => {
-      const section = document.getElementById(id);
-      if (section) {
-        observer.observe(section);
-      }
-    });
-  } else {
-    const onScroll = () => {
-      const scrollY = window.scrollY + window.innerHeight * 0.4;
-      let currentId = "main-hero";
-
-      sections.forEach(({ id }) => {
-        const section = document.getElementById(id);
-        if (section && section.offsetTop <= scrollY) {
-          currentId = id;
-        }
-      });
-
-      setActiveById(currentId);
-    };
-
-    window.addEventListener("scroll", onScroll, { passive: true });
-    onScroll();
-  }
+  window.addEventListener("scroll", updateActive, { passive: true });
+  window.addEventListener("resize", updateActive, { passive: true });
 });
